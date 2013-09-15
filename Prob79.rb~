@@ -1,0 +1,3 @@
+file = File.open("keylog.txt","r")
+inputs = file.read.split("\n").map{|word| word.to_i}
+p inputs

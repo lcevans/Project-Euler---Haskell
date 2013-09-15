@@ -1,0 +1,18 @@
+wins = 0
+games = 0
+
+while true do
+  bag = [0,1] # 0 = red, 1 = blue
+  blue_count = 0
+  red_count = 0
+  4.times do
+    todraw = Random.rand(bag.length)
+    drawn = bag[todraw]
+    red_count += 1 if drawn == 0
+    blue_count += 1 if drawn == 1
+    bag << 0
+  end
+  wins += 1 if blue_count > red_count
+  games += 1
+  puts wins.to_f/games.to_f
+end

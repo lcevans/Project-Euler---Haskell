@@ -1,0 +1,6 @@
+abundant :: Int -> Bool
+abundant n = (<) n $ foldl (\a,k -> a + k if (n `mod` k == 0) else a) 0 [1..n]
+
+abundantnums = filter abundant [1..123]
+
+main = putStrLn $ show $ abundantnums

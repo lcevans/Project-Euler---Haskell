@@ -1,0 +1,11 @@
+--Not sure how to do memoization properly in Haskell
+
+memoized_collatz :: Int -> Int
+memoized_collatz = (map collatz [1..] !!)
+   where collatz n
+           |(n == 1) = 1
+           |(n `mod` 2 == 0) = 1 + (memoized_collatz $ n `quot` 2)
+           |otherwise = 1 + (memoized_collatz $ 3 * n + 1)
+
+main = putStrLn (show answer)
+       where answer = memoized_collatz 2

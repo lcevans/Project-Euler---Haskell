@@ -1,0 +1,4 @@
+file = File.open('base_exp.txt','r')
+data = file.read
+
+p data.split

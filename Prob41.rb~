@@ -1,0 +1,11 @@
+require 'prime'
+
+def findpandigitalprime(n) 
+  array = [1..n]
+  for perm in array.permutation do
+    return perm.join.to_i if Prime.prime?(perm.join.to_i)
+  end
+  return "none found"
+end
+
+p findpandigitalprime(4)

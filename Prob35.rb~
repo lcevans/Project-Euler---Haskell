@@ -1,0 +1,14 @@
+require 'prime'
+
+def circularprime(n)
+  string = n.to_s
+  for k in (0...length(string)) do
+    return false unless Prime.prime?((string[k..-1]+string[0...k]).to_i)
+  end
+  return true
+end
+
+for k in (1..100) do
+  puts k if circularprime(k)
+end
+

@@ -1,0 +1,13 @@
+require 'prime'
+
+def istrunctable(n)
+  if n/10 == 0 then
+    return Prime.prime?(n)
+  else
+    return (Prime.prime?(n) and istrunctable(n/10))
+  end
+end
+
+
+puts istrunctable(17)
+puts istrunctable(3797)

@@ -1,0 +1,7 @@
+
+odds :: [a] -> [a]
+odds [] = []
+odds [x] = [x]
+odds (x:y:xs) = x:(odds xs)
+
+main = putStrLn $ show $ odds [1..50]

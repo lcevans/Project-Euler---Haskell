@@ -1,0 +1,12 @@
+n = 5
+
+redways = [0,0,1]
+for k in (3..n) do
+  newways = 0
+  for j in (0..k-2) do
+    newways += redways[j] + redways[k-j]
+  end
+  redways << newways
+end
+
+p redways

@@ -1,0 +1,4 @@
+namestring = File.read("names.txt")
+names = namestring.split(",")
+names.map!{|name| name[1..-2]}
+

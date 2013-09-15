@@ -1,0 +1,7 @@
+
+Decimal :: Int -> Int -> [Int]  --Decimal r n returns the repeated decimal of r/n
+
+Decimal r n = (r `quot` n): Decimal (r*10 `mod` n) n
+
+
+main = putStrLn $ show $ take 10 $ Decimal 1 7

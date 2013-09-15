@@ -1,0 +1,21 @@
+trianglenums = scanl1 (+) [1..]
+
+primes n = sieve [2..n]
+         where sieve [] = []
+               sieve (p:rest) = p: sieve [k| k<-rest, k `mod` p /= 0]
+
+numberTimesDivides :: Int -> Int -> Int
+numberTimesDivides b a
+  |b `mod` a == 0 = 1 + numberTimesDivides (quot b a) a
+  |otherwise      = 0
+
+--FIX THIS
+--primeFactors :: Int -> [Int]
+--primeFactors n = primecount (primes n)
+                 
+
+numDivisors :: Int -> Int
+numDivisors n = product $ map ((+) 1) $ primeFactors n
+
+main = putStrLn (show output)
+  where output = primeFactors 60 --head $ filter (\ x -> numDivisors x > 500) trianglenums

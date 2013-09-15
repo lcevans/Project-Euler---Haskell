@@ -1,0 +1,5 @@
+file = File.open("words.txt","r")
+text = file.read
+
+trianglenums = (1..1000).map!{|x| x*(x+1)/2}
+

@@ -1,0 +1,20 @@
+def palindrome(n)
+  string = n.to_s
+  return string == string.reverse
+end
+
+def tobasetwo(n)
+  output = 0
+  until n == 0 do
+    output += n % 2
+    output *= 10
+    n /= 2
+  end
+end
+
+def palinboth(n)
+  return false unless palindrome(n)
+  true
+end
+
+puts tobasetwo(13)

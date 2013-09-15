@@ -1,0 +1,15 @@
+require 'prime'
+
+
+def numprimes(a,b)
+  count = 0
+  n = 0
+  while Prime.isPrime?(n*n + a*n + b) do
+    count += 1
+    n += 1
+  end
+  return count
+end
+
+puts numprimes(1,41)
+puts numprimes(-79,1601)

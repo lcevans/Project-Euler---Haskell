@@ -1,0 +1,14 @@
+def testfraction(num,denom)
+  fakenum = num.to_s.chars.map{|x| x.to_i}
+  fakedenom = denom.to_s.chars.map{|x| x.to_i}
+  intersection = fakenum & fakedenom
+  fakenum -= intersection
+  fakedenom -= intersection
+  fakenum = fakenum.join.to_i
+  fakedenom = fakedenom.join.to_i
+  return fakenum*denom  == fakedenom*num
+end
+
+puts testfraction(49,98)
+puts testfraction(30,50)
+puts testfraction(11,31)

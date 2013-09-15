@@ -1,0 +1,12 @@
+length = 0
+
+num = 1
+digits = []
+
+until length > 1000000 do
+  digits << num.to_s.chars.map{|c| c.to_i}
+  length += num.to_s.length 
+  num += 1
+end
+
+p digits[1..100]

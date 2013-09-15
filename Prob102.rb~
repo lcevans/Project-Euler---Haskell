@@ -1,0 +1,15 @@
+#triangles
+
+def check(arr) 
+  anorm = sqrt(arr[0]*arr[0]+arr[1]*arr[1])
+  bnorm = sqrt(arr[2]*arr[2]+arr[3]*arr[3])
+  cnorm = sqrt(arr[4]*arr[4]+arr[5]*arr[5])
+  ang1 = acos((arr[0]*arr[2]+arr[1]*arr[3]).to_f/(anorm*bnorm))
+  ang2 = acos((arr[0]*arr[4]+arr[1]*arr[5]).to_f/(anorm*cnorm))
+  ang3 = acos((arr[4]*arr[2]+arr[5]*arr[3]).to_f/(cnorm*bnorm))
+  return true if (ang1+ang2+ang3) > (2*PI - 0.0001)
+  return false
+end
+
+puts check([-340,495,-153,-910,835,-947])
+puts check([-175,41,-421,-714,574,-645])

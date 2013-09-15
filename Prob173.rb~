@@ -1,0 +1,9 @@
+n = 100
+
+squares = [1,4,9]
+
+until (squares[-1]-squares[-3]) > n do
+  squares << (2*squares[-1] = squares[-2] + 2)
+end
+
+p squares

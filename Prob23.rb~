@@ -1,0 +1,9 @@
+def divisors(n)
+  divs = []
+  for k in (1..n)
+    divs << k if n%k == 0
+  end
+  return divs
+end
+
+puts divisors(24)

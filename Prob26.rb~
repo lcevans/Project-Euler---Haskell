@@ -1,0 +1,7 @@
+def cyclelength(n)
+  length = 1
+  length += 1 until ("9"*length).to_i % n == 0
+  return length
+end
+
+puts cyclelength(7)

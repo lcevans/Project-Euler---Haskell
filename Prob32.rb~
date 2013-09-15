@@ -1,0 +1,12 @@
+def pandigital(a,b,prod)
+  adig = a.to_s.chars.map{|x| x.to_i}
+  bdig = b.to_s.chars.map{|x| x.to_i}
+  pdig = prod.to_s.chars.map{|x| x.to_i}
+  return true if (adig & bdig == []) and (bdig & pdig == []) and (adig & pdig == []) and (adig+bdig+pdig).sort == (1..9).to_a
+  return false
+end
+
+puts pandigital(39,186,39*186)
+puts pandigital(89,76,12345)
+puts pandigital(12,13,456789)
+puts pandigital(14,25,76)

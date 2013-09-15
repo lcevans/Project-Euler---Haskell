@@ -1,0 +1,14 @@
+
+
+def convolve(arr1,arr2)
+  length = arr1.length+arr2.length
+  newarr = [0]*length
+  for i in (0...arr1.length) do
+    for j in (0...arr2.length) do
+      newarr[i+j] += arr1[i]*arr2[j]
+    end
+  end
+  return newarr
+end
+
+p convolve([1,2],[1,0])

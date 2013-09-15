@@ -1,0 +1,5 @@
+
+isGood :: Int -> Bool
+isGood n =  sum $ map (\x -> x ^ 4) $ map digitToInt $ show n
+
+main = PutStrLn $ show $ isGood 8208

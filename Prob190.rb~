@@ -1,0 +1,12 @@
+def factorial(n)
+  return 1 if n == 0
+  return n * factorial(n-1)
+end
+
+sum = 0
+
+2.upto(15) do |m|
+  sum += (2 ** m) * factorial(m) /((m+1)**m)
+end
+
+puts sum

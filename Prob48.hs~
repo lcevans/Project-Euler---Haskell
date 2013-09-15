@@ -1,0 +1,8 @@
+modExp :: Int -> Int -> Int -- n^k mod 10^11
+modExp n k
+  |(k `mod` 2) == 0 = ((modExp n (k `quot` 2))^2 `mod` (10^11))
+  |otherwise = (n * (modExp n (k-1))) `mod` (10^11)
+
+
+main = putStrLn $ show $ modExp 3 4
+

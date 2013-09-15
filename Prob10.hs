@@ -6,4 +6,4 @@ sumPrimes n = sieve [2..n]
 
 main = putStrLn (show output)
        where 
-         output = sumPrimes 2000000
+         output = sumPrimes 200000

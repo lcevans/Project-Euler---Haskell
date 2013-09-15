@@ -1,0 +1,4 @@
+numSolns :: Int -> Int
+numSolns p = length [(a,b,c)|a<-[1..p],b<-[a..p],c<-[b..p],a+b+c=p,a^2+b^2 = c^2 ]
+
+main = putStrLn $ show $ numSolns 120
