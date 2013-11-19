@@ -1,0 +1,4 @@
+def iterate(num)
+  return 1/(2 + num)
+end
+

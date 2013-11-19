@@ -1,0 +1,8 @@
+def factorial(n)
+  (1..n).to_a.inject(:*)
+end
+
+def iterate(num)
+  digits = num.to_s.split("").map(&:to_i)
+  digits.map(&:factorial).inject(:+)
+end

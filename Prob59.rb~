@@ -1,0 +1,16 @@
+string = File.read("cipher1.txt")
+
+digits = string.split(",").map(&:to_i)
+
+p digits
+
+
+def cipher_try(a,b,c)
+  turn = [a,b,c]
+  new_digits = digits.map do |digit|
+    new = turn.first^digit
+    turn.rotate!
+    new
+  end
+  new_digits.map(&:chr).join("")
+end

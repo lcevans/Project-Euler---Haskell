@@ -1,0 +1,11 @@
+cube_counts = Hash.new(0)
+
+num = 0
+while true
+  num += 1
+  sorted_digits = (num ** 3).to_s.split("").sort
+  cube_counts[sorted_digits] += 1
+  if cube_counts[sorted_digits] == 5
+    p num
+  end
+end

@@ -1,0 +1,6 @@
+matrix = []
+
+File.open("matrix.txt", "r").each_line to |line|
+  matrix << line.strip.split(",").map(&:to_i)
+end
+

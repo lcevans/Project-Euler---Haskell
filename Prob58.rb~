@@ -1,0 +1,23 @@
+require 'prime.rb'
+
+num = 1
+offset = 0
+count = 0
+total = 0
+flagged = false
+while true
+  offset += 2
+  4.times do
+    num += offset
+    total += 1
+    count += 1 if
+    if 10 * count < total
+      flagged = true
+    end
+  end
+
+  break if flagged
+end
+
+p num
+p Math.sqrt(num)

@@ -1,0 +1,5 @@
+def iterate(num)
+  digits = num.to_s.split("").map(&:to_i)
+  digits.map! { |x| x * x}
+  digits.inject(:+)
+end

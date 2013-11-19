@@ -1,0 +1,5 @@
+def prime_factors(n)
+  (1..n).each do |k|
+    p k
+  end
+end

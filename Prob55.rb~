@@ -1,0 +1,4 @@
+
+def iterate_it(num)
+  return num.to_s.reverse.to_i
+end

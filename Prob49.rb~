@@ -1,0 +1,5 @@
+require 'prime.rb'
+
+Prime.each(1500) do |prime|
+  
+end

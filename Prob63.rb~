@@ -1,0 +1,11 @@
+def digits(num)
+  return num.to_s.length
+end
+
+k = 0
+while true
+  k += 1
+  break if digits(9 ** k) < k
+end
+
+p k
